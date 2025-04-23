@@ -1,0 +1,8 @@
+/1/.vs/*
+/2/.vs/*
+/3/.vs/*
+/.vs/*
+.replit
+package-lock.json
+package.json
+/portfolio-template-main/.vs/*

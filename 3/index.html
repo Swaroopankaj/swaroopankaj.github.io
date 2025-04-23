@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pankaj Raghuvanshi!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="particles-js"></div>
+    <div id="box">
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
+    </div>
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+        <h1>Hi I'm Pankaj!</h1>
+        <h2>Software Developer / Digital Curator / Human</h2>
+        <div id="menu">
+            <a onclick="showabout()">about</a>
+            <a onclick="showwork()">work</a>
+            <a onclick="showcontact()">contact</a>
+        </div>
+        <table>
+                <tr>
+                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"><i class="fab fa-facebook"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"><i class="fab fa-twitter"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social"><i class="fab fa-instagram"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"><i class="fab fa-dribbble"></i></a></td>
+                </tr>
+        </table>
+    </div>
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1>Works.</h1>
+        <section>
+            <h2>work title</h2>
+            <p>
+                Current Focus:
+                I am currently working on Computer Vision, Artificial Intelligence (AI), and Machine Learning (ML),
+                leveraging a range of powerful tools and libraries to develop innovative solutions and cutting-edge technologies.
+            </p>
+            <div id="used">
+                <div><i class="fas fa-circle"></i>&nbsp;Design</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Create</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Share</div>
+            </div>
+            <button class="btn_one">Canvas</button>
+            <button class="btn_two">Creator</button>
+        </section>
+    </div>
+    <div id="about_container" class="container">
+            <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+            <h1>About.</h1>
+            <section>
+                <h2>about me</h2>
+                <p>
+                   
+                    Hi, I'm Pankaj, a passionate Digital Graphic Content with a deep love for visual storytelling.
+                    My goal is to create stunning graphics and immersive content that not only capture attention but also communicate 
+                    ideas in fresh and innovative ways.
+
+                    With a background in design, multimedia, or visual arts, I've spent years honing my craft, experimenting with 
+                    various techniques, and exploring cutting-edge design tools. Whether it's branding, social media graphics, 
+                    or website visuals, I believe every design should evoke emotion and connect with the audience on a deeper level.
+                    
+                </p>
+                <p>
+                    Each project I take on is a chance to bring a unique vision to life, using a blend of creativity, 
+                    attention to detail, and a touch of boldness. I'm always on the lookout for new trends, techniques,
+                    and tools that allow me to push my designs further.
+
+                    Let’s create something amazing together!
+                </p>
+            </section>
+            <section>
+                <h2>skills</h2>
+                <p>
+                    Jack of all ;)
+                </p>
+            </section>
+        </div>
+          <div id="contact_container" class="container">
+            <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+            <h1>contact.</h1>
+            <section>
+                <h2>contact me</h2>
+                <p>
+                    <form>
+                        <input type="text" placeholder="name" required>
+                        <input type="email" placeholder="email" required><br>
+                        <textarea placeholder="your message" required rows="5"></textarea><br>
+                        <button class="btn_one">send</button>
+                    </form> 
+                </p>
+            </section>
+        </div>
+        <div id="footer">
+            made on earth by a human <br> <a href="https://imfunniee.github.io">imfunniee</a>
+        </div>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
