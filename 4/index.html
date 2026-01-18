@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <meta name="description"
+    content="Engineering consultant specializing in MATLAB, Python, and C/C++ for simulation, data analysis, automation, and performance-critical systems. Based in Stockholm, Sweden."
+  />
+
+  <!-- SEO / Sharing -->
+  <meta itemprop="name" content="Pankaj Swaroop Raghuvanshi – Engineering Consultant" />
+  <meta itemprop="description"
+    content="MATLAB, Python, and C/C++ engineering consultant delivering simulation, automation, and data analysis tools for R&D teams."
+  />
+  <meta itemprop="image" content="assets/images/sharing-card.png" />
+
+  <meta property="og:url" content="https://swaroopankaj.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pankaj Swaroop Raghuvanshi – Engineering Consultant" />
+  <meta property="og:description"
+    content="Engineering consultant specializing in MATLAB, Python, and C/C++ for simulation, automation, and data analysis."
+  />
+  <meta property="og:image" content="assets/images/sharing-card.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pankaj Swaroop Raghuvanshi – Engineering Consultant" />
+  <meta name="twitter:description"
+    content="MATLAB, Python, and C/C++ engineering consultant based in Sweden."
+  />
+  <meta name="twitter:image" content="assets/images/sharing-card.png" />
+
+  <link rel="shortcut icon" href="assets/images/favicons.svg" type="image/png" />
+
+  <link rel="preload" href="assets/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+
+  <title>Pankaj Raghuvanshi | Engineering Consultant (MATLAB · Python · C++)</title>
+</head>
+
+<body>
+<script>
+  const theme = localStorage.getItem("theme") || "dark";
+  document.body.classList.add(theme);
+</script>
+
+<header class="header">
+  <div class="menu-btn-container">
+    <div class="container">
+      <button type="button" class="menu-btn">menu</button>
+    </div>
+  </div>
+
+  <nav class="nav hidden">
+    <ol class="nav-items">
+      <li class="nav-item"><a href="#">Home</a></li>
+      <li class="nav-item"><a href="#work">Work</a></li>
+      <li class="nav-item"><a href="#skills">Skills</a></li>
+      <li class="nav-item"><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <div class="container">
+    <div class="header-textbox">
+      <h1 class="h1">
+        <span>Pankaj Swaroop Raghuvanshi</span>
+        <span>Engineering Consultant</span>
+      </h1>
+
+      <p class="header-text">
+        I help engineering teams build reliable simulation, data analysis,
+        and automation tools using MATLAB, Python, and C/C++.
+      </p>
+
+      <p class="header-text">
+        Experience across automotive systems, signal & image processing,
+        and performance-critical engineering software.
+      </p>
+
+      <p class="header-text">
+        Available for consulting assignments in Sweden and the EU.
+        Working language: English · Swedish learner.
+      </p>
+
+      <div class="header-btns">
+        <a href="#contact" class="btn btn-cta">Hire me</a>
+        <a href="assets/Pankaj_Swaroop_Raghuvanshi_Consulting_CV_FINAL.pdf"
+           class="btn btn-secondary"
+           target="_blank">Download CV</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="work">
+  <div class="container">
+    <h2 class="h2" id="work">Selected Work</h2>
+
+    <div class="work-box">
+      <div class="work-textbox">
+        <h3 class="h3">Deep Learning–Based X-Ray Image Analysis</h3>
+        <p class="work-text">
+          Developed an automated image analysis pipeline using deep learning to classify X-ray images,
+          focusing on preprocessing, model evaluation, and reproducibility.
+        </p>
+        <ol class="work-technologies">
+          <li>TensorFlow</li>
+          <li>Python</li>
+          <li>OpenCV</li>
+        </ol>
+        <a href="https://swaroopankaj.github.io/XrayAnalysisModel/"
+           target="_blank" rel="noopener" class="link">View project</a>
+      </div>
+      <picture class="work-img">
+        <img src="assets/images/work/Deeplearn.webp" alt="X-Ray Analysis" loading="lazy" />
+      </picture>
+    </div>
+
+  </div>
+</section>
+
+<section class="skills">
+  <div class="container">
+    <h2 class="h2" id="skills">Core Toolkit</h2>
+    <div class="skills-imgs">
+      <img src="assets/images/skills/python.svg" alt="Python" class="skills-img" />
+      <img src="assets/images/skills/matlab.svg" alt="MATLAB" class="skills-img" />
+      <img src="assets/images/skills/cuda.svg" alt="CUDA" class="skills-img" />
+      <img src="assets/images/skills/tensorflow-logo.svg" alt="TensorFlow" class="skills-img" />
+      <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" />
+      <img src="assets/images/skills/shell.webp" alt="Linux" class="skills-img" />
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <h2 class="h2" id="contact">Contact</h2>
+
+    <strong class="hire-alert">
+      <span class="indicator"></span>
+      Available for part-time consulting (10–20 h/week)
+    </strong>
+
+    <p class="contact-text">
+      I support engineering teams with simulation tools, automation,
+      data analysis, and performance-critical software development.
+    </p>
+
+    <form class="contact-form" netlify>
+      <div class="form-field">
+        <label>Name</label>
+        <input type="text" required />
+      </div>
+      <div class="form-field">
+        <label>Email</label>
+        <input type="email" required />
+      </div>
+      <div class="form-field">
+        <label>Message</label>
+        <textarea required></textarea>
+      </div>
+      <button type="submit" class="btn btn-cta">Send</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer-text">
+      © 2024 – Pankaj Swaroop Raghuvanshi
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
