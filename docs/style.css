@@ -1121,6 +1121,7 @@ body.light .signatures {
 
 .contact-form button[type="submit"] {
   border: none;
+  margin-inline-start: var(--gutter-nano);
 }
 
 /* --------------------------------- */
