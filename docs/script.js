@@ -6,16 +6,15 @@ const workImgs = document.querySelectorAll(".work-img");
 const mainEl = document.querySelector("main");
 const yearEl = document.querySelector(".footer-text span");
 
+// ---- Navigation Toggle ----
+
 const toggleNav = () => {
   nav.classList.toggle("hidden");
-
-  // Prevent screen from scrolling when menu is opened
   document.body.classList.toggle("lock-screen");
 
   if (nav.classList.contains("hidden")) {
     btnToggleNav.textContent = "menu";
   } else {
-    // When menu is opened after transition change text respectively
     setTimeout(() => {
       btnToggleNav.textContent = "close";
     }, 475);
@@ -36,11 +35,11 @@ document.body.addEventListener("keydown", (e) => {
   }
 });
 
-// Animating work instances on scroll
+// ---- Work section scroll animations ----
 
 workImgs.forEach((workImg) => workImg.classList.add("transform"));
 
-let observer = new IntersectionObserver(
+let workObserver = new IntersectionObserver(
   (entries) => {
     const [entry] = entries;
     const [textbox, picture] = Array.from(entry.target.children);
@@ -55,10 +54,10 @@ let observer = new IntersectionObserver(
 );
 
 workEls.forEach((workEl) => {
-  observer.observe(workEl);
+  workObserver.observe(workEl);
 });
 
-// Toggle theme and store user preferred theme for future
+// ---- Theme Toggle ----
 
 const switchThemeEl = document.querySelector('input[type="checkbox"]');
 const storedTheme = localStorage.getItem("theme");
@@ -80,7 +79,7 @@ switchThemeEl.addEventListener("click", () => {
   }
 });
 
-// Trap the tab when menu is opened
+// ---- Trap tab when menu is opened ----
 
 const lastFocusedEl = document.querySelector('a[data-focused="last-focused"]');
 
@@ -91,7 +90,7 @@ document.body.addEventListener("keydown", (e) => {
   }
 });
 
-// Rotating logos animation
+// ---- Rotating logos animation ----
 
 const logosWrappers = document.querySelectorAll(".logo-group");
 
@@ -111,4 +110,44 @@ logosWrappers.forEach(async (logoWrapper, i) => {
   }, 5600);
 });
 
+// ---- Update footer year ----
 yearEl.textContent = new Date().getFullYear();
+
+// ---- Page Loader ----
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+  if (loader) {
+    setTimeout(() => {
+      loader.classList.add("fade-out");
+      // Remove from DOM after animation
+      loader.addEventListener("transitionend", () => {
+        loader.remove();
+      });
+    }, 600);
+  }
+});
+
+// ---- Scroll-Reveal Observer ----
+// Animates any element with [data-scroll] when it enters the viewport
+
+const scrollRevealEls = document.querySelectorAll("[data-scroll]");
+
+const scrollObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        scrollObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+    rootMargin: "0px 0px -40px 0px",
+  }
+);
+
+scrollRevealEls.forEach((el) => {
+  scrollObserver.observe(el);
+});
