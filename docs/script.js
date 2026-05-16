@@ -1,153 +1,92 @@
-const nav = document.querySelector(".nav");
-const navMenu = document.querySelector(".nav-items");
-const btnToggleNav = document.querySelector(".menu-btn");
-const workEls = document.querySelectorAll(".work-box");
-const workImgs = document.querySelectorAll(".work-img");
-const mainEl = document.querySelector("main");
-const yearEl = document.querySelector(".footer-text span");
+document.addEventListener('DOMContentLoaded', () => {
+    const cursorGlow = document.querySelector('.cursor-glow');
+    const nav = document.getElementById('navbar');
+    const revealElements = document.querySelectorAll('.reveal');
 
-// ---- Navigation Toggle ----
+    // Cursor Glow Movement
+    document.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        
+        cursorGlow.style.left = x + 'px';
+        cursorGlow.style.top = y + 'px';
 
-const toggleNav = () => {
-  nav.classList.toggle("hidden");
-  document.body.classList.toggle("lock-screen");
+        // Subtle magnetic effect for primary buttons
+        const magneticBtns = document.querySelectorAll('.btn.primary');
+        magneticBtns.forEach(btn => {
+            const rect = btn.getBoundingClientRect();
+            const btnX = rect.left + rect.width / 2;
+            const btnY = rect.top + rect.height / 2;
+            const dist = Math.sqrt(Math.pow(x - btnX, 2) + Math.pow(y - btnY, 2));
 
-  if (nav.classList.contains("hidden")) {
-    btnToggleNav.textContent = "menu";
-  } else {
-    setTimeout(() => {
-      btnToggleNav.textContent = "close";
-    }, 475);
-  }
-};
-
-btnToggleNav.addEventListener("click", toggleNav);
-
-navMenu.addEventListener("click", (e) => {
-  if (e.target.localName === "a") {
-    toggleNav();
-  }
-});
-
-document.body.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !nav.classList.contains("hidden")) {
-    toggleNav();
-  }
-});
-
-// ---- Work section scroll animations ----
-
-workImgs.forEach((workImg) => workImg.classList.add("transform"));
-
-let workObserver = new IntersectionObserver(
-  (entries) => {
-    const [entry] = entries;
-    const [textbox, picture] = Array.from(entry.target.children);
-    if (entry.isIntersecting) {
-      picture.classList.remove("transform");
-      Array.from(textbox.children).forEach(
-        (el) => (el.style.animationPlayState = "running")
-      );
-    }
-  },
-  { threshold: 0.3 }
-);
-
-workEls.forEach((workEl) => {
-  workObserver.observe(workEl);
-});
-
-// ---- Theme Toggle ----
-
-const switchThemeEl = document.querySelector('input[type="checkbox"]');
-const storedTheme = localStorage.getItem("theme");
-
-switchThemeEl.checked = storedTheme === "dark" || storedTheme === null;
-
-switchThemeEl.addEventListener("click", () => {
-  const isChecked = switchThemeEl.checked;
-
-  if (!isChecked) {
-    document.body.classList.remove("dark");
-    document.body.classList.add("light");
-    localStorage.setItem("theme", "light");
-    switchThemeEl.checked = false;
-  } else {
-    document.body.classList.add("dark");
-    document.body.classList.remove("light");
-    localStorage.setItem("theme", "dark");
-  }
-});
-
-// ---- Trap tab when menu is opened ----
-
-const lastFocusedEl = document.querySelector('a[data-focused="last-focused"]');
-
-document.body.addEventListener("keydown", (e) => {
-  if (e.key === "Tab" && document.activeElement === lastFocusedEl) {
-    e.preventDefault();
-    btnToggleNav.focus();
-  }
-});
-
-// ---- Rotating logos animation ----
-
-const logosWrappers = document.querySelectorAll(".logo-group");
-
-const sleep = (number) => new Promise((res) => setTimeout(res, number));
-
-logosWrappers.forEach(async (logoWrapper, i) => {
-  const logos = Array.from(logoWrapper.children);
-  await sleep(1400 * i);
-  setInterval(() => {
-    let temp = logos[0];
-    logos[0] = logos[1];
-    logos[1] = logos[2];
-    logos[2] = temp;
-    logos[0].classList.add("hide", "to-top");
-    logos[1].classList.remove("hide", "to-top", "to-bottom");
-    logos[2].classList.add("hide", "to-bottom");
-  }, 5600);
-});
-
-// ---- Update footer year ----
-yearEl.textContent = new Date().getFullYear();
-
-// ---- Page Loader ----
-
-window.addEventListener("load", () => {
-  const loader = document.getElementById("page-loader");
-  if (loader) {
-    setTimeout(() => {
-      loader.classList.add("fade-out");
-      // Remove from DOM after animation
-      loader.addEventListener("transitionend", () => {
-        loader.remove();
-      });
-    }, 600);
-  }
-});
-
-// ---- Scroll-Reveal Observer ----
-// Animates any element with [data-scroll] when it enters the viewport
-
-const scrollRevealEls = document.querySelectorAll("[data-scroll]");
-
-const scrollObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("revealed");
-        scrollObserver.unobserve(entry.target);
-      }
+            if (dist < 100) {
+                const moveX = (x - btnX) * 0.2;
+                const moveY = (y - btnY) * 0.2;
+                btn.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            } else {
+                btn.style.transform = '';
+            }
+        });
     });
-  },
-  {
-    threshold: 0.1,
-    rootMargin: "0px 0px -40px 0px",
-  }
-);
 
-scrollRevealEls.forEach((el) => {
-  scrollObserver.observe(el);
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    // Intersection Observer for Reveal Animations
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Form Submission (Mock)
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerText = 'Message Sent!';
+                btn.style.background = '#27C93F';
+                contactForm.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+    }
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
