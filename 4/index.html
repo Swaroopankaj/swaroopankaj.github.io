@@ -1,185 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
 
-  <meta name="description"
-    content="Engineering consultant specializing in MATLAB, Python, and C/C++ for simulation, data analysis, automation, and performance-critical systems. Based in Stockholm, Sweden."
-  />
+    <meta name="description"
+    content="I help R&D and engineering teams ship faster by building automated data pipelines, simulation tools, and ML-powered analysis systems in MATLAB, Python, and C/C++. Based in Stockholm — available across the EU."
+    />
 
-  <!-- SEO / Sharing -->
-  <meta itemprop="name" content="Pankaj Swaroop Raghuvanshi – Engineering Consultant" />
-  <meta itemprop="description"
-    content="MATLAB, Python, and C/C++ engineering consultant delivering simulation, automation, and data analysis tools for R&D teams."
-  />
-  <meta itemprop="image" content="assets/images/sharing-card.png" />
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Pankaj Swaroop Raghuvanshi – Engineering Consultant">
+    <meta itemprop="description"
+      content="I help R&D teams cut validation time, automate repetitive workflows, and extract insights from engineering data — using MATLAB, Python, and C/C++."
+    />
 
-  <meta property="og:url" content="https://swaroopankaj.github.io/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pankaj Swaroop Raghuvanshi – Engineering Consultant" />
-  <meta property="og:description"
-    content="Engineering consultant specializing in MATLAB, Python, and C/C++ for simulation, automation, and data analysis."
-  />
-  <meta property="og:image" content="assets/images/sharing-card.png" />
+    <meta property="og:title" content="Pankaj Swaroop Raghuvanshi – Engineering Consultant">
+    <meta property="og:description"
+      content="I help engineering teams ship faster with automated pipelines, simulation tools, and ML analysis — MATLAB, Python, C/C++."
+    />
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pankaj Swaroop Raghuvanshi – Engineering Consultant" />
-  <meta name="twitter:description"
-    content="MATLAB, Python, and C/C++ engineering consultant based in Sweden."
-  />
-  <meta name="twitter:image" content="assets/images/sharing-card.png" />
+    <meta name="twitter:title" content="Pankaj Swaroop Raghuvanshi – Engineering Consultant">
+    <meta name="twitter:description"
+      content="I help engineering teams automate workflows, build simulation tools, and accelerate R&D — based in Sweden, available across the EU."
+    />
 
-  <link rel="shortcut icon" href="assets/images/favicons.svg" type="image/png" />
+    <title>Pankaj Raghuvanshi | Engineering Consultant (MATLAB · Python · C++)</title>
 
-  <link rel="preload" href="assets/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin />
+    <meta itemprop="image" content="assets/images/sharing-card.png">
 
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://swaroopankaj.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/sharing-card.png">
 
-  <title>Pankaj Raghuvanshi | Engineering Consultant (MATLAB · Python · C++)</title>
-</head>
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="assets/images/sharing-card.png">
 
-<body>
-<script>
-  const theme = localStorage.getItem("theme") || "dark";
-  document.body.classList.add(theme);
-</script>
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicons.svg"
+      type="image/png"
+    />
 
-<header class="header">
-  <div class="menu-btn-container">
-    <div class="container">
-      <button type="button" class="menu-btn">menu</button>
-    </div>
-  </div>
+    <!-- Preloading fonts for better performance -->
+    <link
+      rel="preload"
+      href="assets/fonts/Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-  <nav class="nav hidden">
-    <ol class="nav-items">
-      <li class="nav-item"><a href="#">Home</a></li>
-      <li class="nav-item"><a href="#work">Work</a></li>
-      <li class="nav-item"><a href="#skills">Skills</a></li>
-      <li class="nav-item"><a href="#contact">Contact</a></li>
-    </ol>
-  </nav>
+    <link rel="stylesheet" href="style.css"  />
+    <script src="script.js" defer></script>
+  </head>
 
-  <div class="container">
-    <div class="header-textbox">
-      <h1 class="h1">
-        <span>Pankaj Swaroop Raghuvanshi</span>
-        <span>Engineering Consultant</span>
-      </h1>
+  <body>
 
-      <p class="header-text">
-        I help engineering teams build reliable simulation, data analysis,
-        and automation tools using MATLAB, Python, and C/C++.
-      </p>
-
-      <p class="header-text">
-        Experience across automotive systems, signal & image processing,
-        and performance-critical engineering software.
-      </p>
-
-      <p class="header-text">
-        Available for consulting assignments in Sweden and the EU.
-        Working language: English · Swedish learner.
-      </p>
-
-      <div class="header-btns">
-        <a href="#contact" class="btn btn-cta">Hire me</a>
-        <a href="assets/Pankaj_Swaroop_Raghuvanshi_Consulting_CV_FINAL.pdf"
-           class="btn btn-secondary"
-           target="_blank">Download CV</a>
+    <!-- Page Loader -->
+    <div class="loader" id="page-loader">
+      <div class="loader-inner">
+        <div class="loader-bar"></div>
+        <span class="loader-text">Loading</span>
       </div>
     </div>
-  </div>
-</header>
 
-<main>
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.body.classList.add(theme);
+    </script>
 
-<section class="work">
-  <div class="container">
-    <h2 class="h2" id="work">Selected Work</h2>
+    <header class="header">
 
-    <div class="work-box">
-      <div class="work-textbox">
-        <h3 class="h3">Deep Learning–Based X-Ray Image Analysis</h3>
-        <p class="work-text">
-          Developed an automated image analysis pipeline using deep learning to classify X-ray images,
-          focusing on preprocessing, model evaluation, and reproducibility.
-        </p>
-        <ol class="work-technologies">
-          <li>TensorFlow</li>
-          <li>Python</li>
-          <li>OpenCV</li>
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button"  class="menu-btn">menu</button>
+        </div>
+      </div>
+
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">Results</a></li>
+          <li class="nav-item"><a href="#blog">Insights</a></li>
+          <li class="nav-item"><a href="#skills">Expertise</a></li>
+          <li class="nav-item">
+            <a href="#contact" data-focused="last-focused">Hire Me</a>
+          </li>
         </ol>
-        <a href="https://swaroopankaj.github.io/XrayAnalysisModel/"
-           target="_blank" rel="noopener" class="link">View project</a>
+      </nav>
+
+      <div class="container">
+          <div class="header-textbox">
+                <h1 class="h1">
+                  <span class="hero-name">Pankaj Swaroop Raghuvanshi</span>
+                  <span class="hero-title">Engineering Automation Consultant</span>
+                </h1>
+
+                <p class="header-text">
+                MATLAB · Python · C/C++ tools that cut validation cycles, automate
+                data pipelines, and ship simulation workflows faster.
+                </p>
+
+              <div class="header-btns">
+                  <a href="#contact" class="btn btn-cta">Free Consultation</a>
+                  <a href="#work" class="btn btn-secondary">See Results</a>
+              </div>
+          </div>
       </div>
-      <picture class="work-img">
-        <img src="assets/images/work/Deeplearn.webp" alt="X-Ray Analysis" loading="lazy" />
-      </picture>
-    </div>
+    </header>
 
-  </div>
-</section>
+    <main>
 
-<section class="skills">
-  <div class="container">
-    <h2 class="h2" id="skills">Core Toolkit</h2>
-    <div class="skills-imgs">
-      <img src="assets/images/skills/python.svg" alt="Python" class="skills-img" />
-      <img src="assets/images/skills/matlab.svg" alt="MATLAB" class="skills-img" />
-      <img src="assets/images/skills/cuda.svg" alt="CUDA" class="skills-img" />
-      <img src="assets/images/skills/tensorflow-logo.svg" alt="TensorFlow" class="skills-img" />
-      <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" />
-      <img src="assets/images/skills/shell.webp" alt="Linux" class="skills-img" />
-    </div>
-  </div>
-</section>
+        <section class="work" data-scroll>
+            <div class="container">
+                <h2 class="h2" id="work">Proven Results for Engineering Teams</h2>
+                <div class="work-boxes">
+                    <div class="work-box">
+                      <div class="work-textbox">
+                        <h3 class="h3">Cut Validation Time by 70% With Automated Data Pipelines</h3>
+                        <p class="work-text">
+                          An automotive R&amp;D team was spending weeks manually processing sensor data.
+                          I built automated MATLAB and Python pipelines that reduced their validation
+                          cycle from days to hours — freeing engineers to focus on design decisions
+                          instead of spreadsheet wrangling.
+                        </p>
+                        <ol class="work-technologies">
+                          <li>MATLAB</li>
+                          <li>Python</li>
+                          <li>NumPy / Pandas</li>
+                          <li>Data Visualization</li>
+                          <li>Linux</li>
+                        </ol>
+                        <div class="work-links">
+                          <span class="link">Confidential client — details on request</span>
+                        </div>
+                      </div>
+                      <picture class="work-img">
+                        <img src="assets/images/work/engineering-data-analysis.png"
+                             alt="Engineering data analysis and automation dashboard" />
+                      </picture>
+                    </div>
+                    <div class="work-box">
+                      <div class="work-textbox">
+                        <h3 class="h3">Replaced Manual Inspection With AI-Powered Classification</h3>
+                        <p class="work-text">
+                          A research team needed to classify thousands of signal and image samples per day.
+                          I delivered a modular pipeline that automated preprocessing, deep-learning classification,
+                          and validation — turning a 3-day manual process into a one-click workflow with
+                          95%+ accuracy.
+                        </p>
+                        <ol class="work-technologies">
+                          <li>Python</li>
+                          <li>MATLAB</li>
+                          <li>TensorFlow / Keras</li>
+                          <li>OpenCV</li>
+                          <li>GPU Acceleration</li>
+                        </ol>
+                        <div class="work-links">
+                          <span class="link">Confidential client — details on request</span>
+                        </div>
+                      </div>
+                      <picture class="work-img">
+                        <img src="assets/images/work/signal-image-analysis.png"
+                             alt="Signal and image analysis pipeline visualization" />
+                      </picture>
+                    </div>
+                    <div class="work-box">
+                        <div class="work-textbox">
+                            <h3 class="h3">Automated X-Ray Diagnostics — From Raw Images to Actionable Results</h3>
+                            <p class="work-text">
+                            Built a production-ready deep learning pipeline that classifies X-ray images
+                            automatically. The system handles preprocessing, model training, evaluation, and
+                            inference — enabling teams to go from raw images to diagnostic insights without
+                            manual review bottlenecks.
+                            </p>
 
-<section class="contact">
-  <div class="container">
-    <h2 class="h2" id="contact">Contact</h2>
+                            <ol class="work-technologies">
+                                <li>Tensorflow</li>
+                                <li>opencv-python</li>
+                                <li>seaborn</li>
+                            </ol>
+                            <div class="work-links">
+                                <a href="https://swaroopankaj.github.io/XrayAnalysisModel/" target="_blank" rel="noopener" class="link">See the live demo →</a>
+                                <a href="#"
+                                   target="_blank"
+                                   rel="noopener"
+                                   title="Source code">
+                                    <img src="assets/images/social-links/github.svg"
+                                         alt="GitHub"
+                                         loading="lazy" />
+                                </a>
+                            </div>
+                        </div>
+                        <picture class="work-img">
+                            <img loading="lazy"
+                                 src="assets/images/work/Deeplearn.png"
+                                 alt="X-ray Analysis" />
+                        </picture>
+                    </div>
+                    <div class="work-box">
+                        <div class="work-textbox">
+                            <h3 class="h3">Real-Time Object Detection — Browser-Based, Zero Setup</h3>
+                            <p class="work-text">
+                                Tired of complex ML deployment? This browser-based detection system
+                                runs entirely client-side with TensorFlow.js — no server, no GPU required.
+                                Point a webcam or upload an image and get instant bounding boxes
+                                with confidence scores.
+                            </p>
+                            <ol class="work-technologies">
+                                <li>Tensorflow</li>
+                                <li>HTML</li>
+                                <li>Tailwind CSS</li>
+                                <li>JavaScript</li>
+                            </ol>
 
-    <strong class="hire-alert">
-      <span class="indicator"></span>
-      Available for part-time consulting (10–20 h/week)
-    </strong>
+                            <div class="work-links">
+                                <a href="https://swaroopankaj.github.io/real-time-object-detection/" target="_blank" rel="noopener" class="link">Try it live →</a>
+                                <a href="https://github.com/crazyslim021"
+                                   target="_blank"
+                                   rel="noopener"
+                                   title="Source code">
+                                    <img src="assets/images/social-links/github.svg"
+                                         alt="GitHub"
+                                         loading="lazy" />
+                                </a>
+                            </div>
+                        </div>
 
-    <p class="contact-text">
-      I support engineering teams with simulation tools, automation,
-      data analysis, and performance-critical software development.
-    </p>
+                        <picture class="work-img">
+                            <img loading="lazy"
+                                 src="assets/images/work/Tenflo_classifier.png"
+                                 alt="tensor flow classifier" />
+                        </picture>
+                    </div>
+                    <div class="work-box">
+                        <div class="work-textbox">
+                            <h3 class="h3">Nebula — Professional Image Processing in the Browser</h3>
+                            <p class="work-text">
+                                Engineers and designers needed quick, no-install image processing.
+                                Nebula delivers browser-based transformations, filtering, and format
+                                conversion — powered by OpenCV and MediaPipe. No downloads, no licenses,
+                                just results.
+                            </p>
+                            <ol class="work-technologies">
+                                <li>OpenCV</li>
+                                <li>Tailwind CSS</li>
+                                <li>HTML</li>
+                                <li>MediaPipe</li>
+                            </ol>
 
-    <form class="contact-form" netlify>
-      <div class="form-field">
-        <label>Name</label>
-        <input type="text" required />
-      </div>
-      <div class="form-field">
-        <label>Email</label>
-        <input type="email" required />
-      </div>
-      <div class="form-field">
-        <label>Message</label>
-        <textarea required></textarea>
-      </div>
-      <button type="submit" class="btn btn-cta">Send</button>
-    </form>
-  </div>
-</section>
+                            <div class="work-links">
+                                <a href="https://swaroopankaj.github.io/Nebula-ImageEditor/" target="_blank" rel="noopener" class="link">Try it live →</a>
+                                <a href="https://github.com/crazyslim021"
+                                   target="_blank"
+                                   rel="noopener"
+                                   title="Source code">
+                                    <img src="assets/images/social-links/github.svg"
+                                         alt="GitHub"
+                                         loading="lazy" />
+                                </a>
+                            </div>
+                        </div>
 
-</main>
+                        <picture class="work-img">
+                            <img loading="lazy"
+                                 src="assets/images/work/ImageEditor.png"
+                                 alt="Nebula image editor" />
+                        </picture>
+                    </div>
+                </div>
+        </section>
+
+        <section class="skills" data-scroll>
+            <div class="container">
+                <h2 class="h2" id="skills">Technologies I Deliver With</h2>
+                <div class="skills-imgs">
+                    <div class="skill-item" data-skill="Compass">
+                      <img src="assets/images/skills/compass.svg" alt="Compass" class="skills-img" loading="lazy" title="Compass">
+                    </div>
+                    <div class="skill-item" data-skill="Python">
+                      <img src="assets/images/skills/python.svg" alt="Python" class="skills-img" loading="lazy" title="Python">
+                    </div>
+                    <div class="skill-item" data-skill="MATLAB">
+                      <img src="assets/images/skills/matlab.svg" alt="MATLAB" class="skills-img" loading="lazy" title="MATLAB">
+                    </div>
+                    <div class="skill-item" data-skill="Ubuntu / Linux">
+                      <img src="assets/images/skills/ubuntu.svg" alt="Ubuntu / Linux" class="skills-img" loading="lazy" title="Ubuntu / Linux">
+                    </div>
+                    <div class="skill-item" data-skill="Shell Scripting">
+                      <img src="assets/images/skills/shell.webp" alt="Shell" class="skills-img" loading="lazy" title="Shell Scripting">
+                    </div>
+                    <div class="skill-item" data-skill="TensorFlow">
+                      <img src="assets/images/skills/tensorflow-logo.svg" alt="TensorFlow" class="skills-img" loading="lazy" title="TensorFlow">
+                    </div>
+                    <div class="skill-item" data-skill="CUDA">
+                      <img src="assets/images/skills/cuda.svg" alt="CUDA" class="skills-img" loading="lazy" title="CUDA">
+                    </div>
+                    <div class="skill-item" data-skill="Git">
+                      <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+                    </div>
+                    <div class="skill-item" data-skill="HTML / CSS">
+                      <img src="assets/images/skills/html.webp" alt="HTML / CSS" class="skills-img" loading="lazy" title="HTML / CSS">
+                    </div>
+                    <div class="skill-item" data-skill="Unity">
+                      <img src="assets/images/skills/unityhub.svg" alt="Unity" class="skills-img" loading="lazy" title="Unity">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article" data-scroll>
+            <div class="container">
+                <h2 class="h2" id="blog">Engineering Insights &amp; Thought Leadership</h2>
+                <div class="article-boxes">
+                    <article class="article-box featured-article">
+                        <div class="article-textbox">
+                            <div>
+                                <h3 class="h3">
+                                    Why TensorFlow Is the Engine Behind Every AI Product You Use
+                                </h3>
+                                <p class="article-text">
+                                    From autonomous vehicles to predictive maintenance — TensorFlow powers the ML systems your competitors are already building. Here's what your team needs to know to get started.
+                                </p>
+                            </div>
+                            <div class="article-info">
+                                <a href="https://playground.tensorflow.org/" class="link" target="_blank" rel="noopener">Explore the playground →</a>
+                                <span class="reaction-count">
+                                    <img src="./assets/images/heart-outline.svg" alt="heart" />
+                                    416
+                                </span>
+                            </div>
+                        </div>
+                        <picture class="article-illustration">
+                            <img src="assets/images/article_blog.png"
+                                 alt="AI Brain"
+                                 loading="lazy" />
+                        </picture>
+                    </article>
+                    <article class="article-box">
+                        <div class="article-textbox">
+                            <div>
+                                <h3 class="h4">Style Transfer in Production: From Research to Real-World Applications</h3>
+                                <p class="article-text">
+                                    Neural style transfer isn't just for art experiments — it's being used in design automation, content generation, and brand tooling. Here's how the technology works under the hood.
+                                </p>
+                            </div>
+                            <div class="article-info">
+                                <a href="https://deepart.ai/" class="link" target="_blank" rel="noopener">Continue reading</a>
+                                <span class="reaction-count">
+                                    <img src="./assets/images/heart-outline.svg"
+                                         alt="heart"
+                                         loading="lazy" />
+                                    47
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-box">
+                        <div class="article-textbox">
+                            <div>
+                                <h3 class="h4">
+                                    DeepSpeed: How to Train 10x Larger Models Without 10x the Cost
+                                </h3>
+                                <p class="article-text">
+                                    Your GPU bill is growing but your model accuracy isn't? DeepSpeed, Microsoft's optimization library, lets you train massive neural networks with a fraction of the hardware — and I've used it to cut client training costs by over 60%.
+                                </p>
+                            </div>
+                            <div class="article-info">
+                                <a href="https://www.deepspeed.ai/" class="link" target="_blank" rel="noopener">Continue reading</a>
+                                <span class="reaction-count">
+                                    <img src="./assets/images/heart-outline.svg"
+                                         alt="heart"
+                                         loading="lazy" />
+                                    177
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-box">
+                        <div class="article-textbox">
+                            <div>
+                                <h3 class="h4">
+                                    Generative AI for Engineering: Beyond the Hype, Real Use Cases
+                                </h3>
+                                <p class="article-text">
+                                    Generative models like DALL·E aren't just for social media. Engineering teams are using them for synthetic data generation, design exploration, and test-case augmentation. Here's where the real value is.
+                                </p>
+                            </div>
+                            <div class="article-info">
+                                <a href="https://www.craiyon.com/" class="link" target="_blank" rel="noopener">Continue reading</a>
+                                <span class="reaction-count">
+                                    <img loading="lazy"
+                                         src="./assets/images/heart-outline.svg"
+                                         alt="heart" />
+                                    350
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" data-scroll>
+            <div class="container">
+                <h2 class="h2" id="contact">Let's Work Together</h2>
+                <div class="contact-content">
+                    <div class="contact-textbox">
+                        <strong class="hire-alert">
+                        <span class="indicator"></span>
+                        Accepting new clients — limited availability
+                        </strong>
+
+                        <p class="contact-text">
+                        Tell me about your engineering challenge and I'll respond
+                        within 24 hours with a clear plan for how I can help —
+                        whether it's automating a pipeline, building a simulation tool,
+                        or training an ML model.
+                        </p>
+
+                        <p class="contact-text">
+                        <strong>First consultation is free.</strong> Remote or on-site across
+                        Stockholm, Sweden, and the EU.
+                        </p>
+
+                        <img src="assets/images/signatures.png"
+                             alt="Pankaj"
+                             class="signatures"
+                             loading="lazy" />
+                    </div>
+                    <form action="#" class="contact-form" netlify>
+                        <div class="form-field">
+                            <input type="text" name="name" id="name" required placeholder=" " />
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="email"
+                                   name="email"
+                                   id="email"
+                                   required
+                                   inputmode="email"
+                                   placeholder=" " />
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-field">
+                            <textarea name="message" id="message" required placeholder=" "></textarea>
+                            <label for="message">Describe your engineering challenge</label>
+                        </div>
+                        <button type="submit" class="btn btn-cta btn-submit">Start a Conversation →</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
 <footer class="footer">
-  <div class="container">
-    <p class="footer-text">
-      © 2024 – Pankaj Swaroop Raghuvanshi
-    </p>
-  </div>
-</footer>
-
-</body>
+      <div class="container">
+        <div class="footer-content">
+          <nav>
+            <ol class="footer-links">
+              <li class="footer-link">
+                <a title="GitHub" href="https://github.com/crazyslim021" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Codepen" href="https://github.com/crazyslim021" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/codepen.svg"
+                    alt="Codepen"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Linkedin" href="https://www.linkedin.com/in/crazyslim021/" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/linkedin.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Twitter" href="https://github.com/crazyslim021" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/twitter.svg"
+                    alt="Twitter"
+                /></a>
+              </li>
+            </ol>
+          </nav>
+          <p class="footer-text">
+            &copy; <span>2024</span> - Designed &amp; developed by <a target="_blank" rel="noopener" href="https://github.com/crazyslim021">Pankaj.</a>
+          </p>
+          <label class="theme-switch" for="theme-switch">
+            <span>Dark Theme</span>
+            <input type="checkbox" id="theme-switch" role="switch"/>
+          </label>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
