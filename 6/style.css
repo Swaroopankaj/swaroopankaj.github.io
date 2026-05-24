@@ -224,18 +224,22 @@ nav.nav-scrolled {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
     text-decoration: none;
     color: var(--text-primary);
     font-family: var(--font-heading);
     font-weight: 900;
     font-size: 1.3rem;
     letter-spacing: -0.03em;
+    white-space: nowrap;
 }
 
 .logo-img {
     height: 38px;
-    width: auto;
+    width: 38px;
+    flex-shrink: 0;
+    object-fit: contain;
+    display: block;
     filter: drop-shadow(0 0 8px rgba(var(--primary-rgb), 0.5));
 }
 
@@ -1703,6 +1707,8 @@ nav.nav-scrolled {
     border-top: 1px solid var(--border-glass);
     padding: 3rem 0;
     background: #03050a;
+    position: relative;
+    z-index: 10;
 }
 
 .footer-content {
@@ -1719,6 +1725,9 @@ nav.nav-scrolled {
 .footer-socials {
     display: flex;
     gap: 1.5rem;
+    align-items: center;
+    position: relative;
+    z-index: 10;
 }
 
 .footer-socials a {
