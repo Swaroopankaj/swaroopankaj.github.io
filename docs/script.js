@@ -504,6 +504,17 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: ["MATLAB Simulink", "TensorFlow GPU Core", "OpenCV Segmentation", "GPU Threads Acceleration"],
             demo: "https://github.com/Swaroopankaj",
             github: "https://github.com/Swaroopankaj"
+        },
+        kluvenai: {
+            title: "KluvenAI: Visual Agent Workflow Builder",
+            metric: "⚡ Agentic AI Builder",
+            challenge: "Designing and testing multi-agent LLM workflows typically requires writing complex code, making rapid iteration difficult for researchers and engineers.",
+            solution: "Built a visual drag-and-drop agent workflow builder using React Flow (xyflow). Users can design autonomous agent chains, configure LLM tools, set guardrails, and execute workflows against real LLM backends via a FastAPI server connected to OpenRouter. The interface supports real-time streaming, JSON schema validation, and exportable playbook configurations.",
+            roiResult: "Rapid Visual Agent Prototyping",
+            roiDesc: "Enables engineers to design, test, and iterate on agentic workflows in minutes instead of hours, with zero boilerplate code.",
+            tech: ["React", "xyflow", "FastAPI", "OpenRouter", "TypeScript", "Tailwind CSS"],
+            demo: "https://kluvenai.agenticworkflow.space",
+            github: "https://github.com/Swaroopankaj/kluvenAI"
         }
     };
 
